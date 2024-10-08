@@ -36,7 +36,7 @@ b = 0.04
 w = -0.34
 lr = 0.02
 
-epoch_max = 10
+epoch_max = 50
 losses_debug = []
 plt.ion()
 
@@ -69,3 +69,6 @@ for epoch_i in range(epoch_max):
         (dw, db) = gradient(y_hat, y, x)
         (w, b) = update_weights(w, b, lr, dw, db)
 
+# plt.plot(losses_debug[10:])
+# plt.show()
+# plt.pause(10)
